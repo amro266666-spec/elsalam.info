@@ -24,7 +24,7 @@ export function PainPointsSection() {
     <section className="py-16 sm:py-24 bg-[#E6E6E6]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl text-center mb-12 text-[#0B1C2D]" style={{ fontWeight: 700 }}>
-          هل تواجه أي من هذه المشاكل؟
+          بتواجه مشاكل من دي؟
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {painPoints.map((point, index) => (

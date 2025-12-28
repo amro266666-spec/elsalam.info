@@ -26,21 +26,12 @@ export function HeroSection() {
           <p className="text-xl sm:text-2xl mb-8 text-white/90">
             ننفذ رسوماتك الهندسية بدقة عالية ونقدّم حلول تصنيع موثوقة ترفع كفاءة مشروعك
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-end">
+          <div className="flex justify-end">
             <button
               onClick={scrollToForm}
               className="bg-[#FF8C00] hover:bg-[#FF8C00]/90 text-white px-8 py-4 rounded-lg transition-all shadow-lg hover:shadow-xl"
             >
               اطلب عرض سعر الآن
-            </button>
-            <button
-              onClick={scrollToForm}
-              className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-all"
-            >
-              <span className="flex items-center justify-center gap-2">
-                <Phone className="w-5 h-5" />
-                تواصل مع مهندس التنفيذ
-              </span>
             </button>
           </div>
         </div>

@@ -32,7 +32,7 @@ export function ProcessSection() {
     <section className="py-16 sm:py-24 bg-[#E6E6E6]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl text-center mb-4 text-[#0B1C2D]" style={{ fontWeight: 700 }}>
-          كيف نعمل معك
+          خطوات تنفيذ شغلك مع السلام
         </h2>
         <p className="text-center text-[#2F2F2F] mb-12 max-w-2xl mx-auto">
           عملية واضحة ومنظمة من البداية حتى التسليم النهائي

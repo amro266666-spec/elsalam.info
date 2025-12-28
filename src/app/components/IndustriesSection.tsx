@@ -1,4 +1,4 @@
-import { Factory, Warehouse, Building, Package, Settings } from 'lucide-react';
+import { Factory, CircuitBoard, Building, Plug2, Settings, Hammer } from 'lucide-react';
 
 export function IndustriesSection() {
   const industries = [
@@ -7,20 +7,24 @@ export function IndustriesSection() {
       label: 'مصانع إنتاج',
     },
     {
-      icon: Warehouse,
-      label: 'مخازن ولوجستيات',
+      icon: CircuitBoard,
+      label: 'مصانع لوحات كهرباء',
     },
     {
       icon: Building,
       label: 'شركات مقاولات',
     },
     {
-      icon: Package,
-      label: 'مصانع أغذية وأدوية',
+      icon: Plug2,
+      label: 'مصانع الأجهزة الكهربائية',
     },
     {
       icon: Settings,
       label: 'ورش ومصانع خطوط إنتاج',
+    },
+    {
+      icon: Hammer,
+      label: 'تنفيذ الرفايع - الاسطمبات',
     },
   ];
 
@@ -28,9 +32,9 @@ export function IndustriesSection() {
     <section className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl text-center mb-12 text-[#0B1C2D]" style={{ fontWeight: 700 }}>
-          القطاعات التي نخدمها
+          بعض القطاعات التي نخدمها
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
             <div
               key={index}

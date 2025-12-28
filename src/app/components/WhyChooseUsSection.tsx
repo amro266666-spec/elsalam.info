@@ -35,10 +35,10 @@ export function WhyChooseUsSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-3xl sm:text-4xl text-center mb-4 text-white" style={{ fontWeight: 700 }}>
-          لماذا تختارنا كشريك صناعي؟
+          ليه تختار السلام لتنفيذ حلولك المعدنية؟
         </h2>
         <p className="text-center text-white/80 mb-12 max-w-2xl mx-auto">
-          نحن نفهم احتياجات المصانع والمشروعات الصناعية ونقدم حلول موثوقة ومخصصة
+          احنا بنفهم احتياجات المصانع والمشروعات الصناعية ونقدم حلول موثوقة ومخصصة
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {reasons.map((reason, index) => (

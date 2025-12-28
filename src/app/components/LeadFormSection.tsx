@@ -5,6 +5,9 @@ import { useState } from 'react';
 interface FormData {
   name: string;
   phone: string;
+  companyName: string;
+  requirements: string;
+  hasDrawings: string;
   projectType: string;
 }
 
@@ -26,7 +29,7 @@ export function LeadFormSection() {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl mb-4 text-[#0B1C2D]" style={{ fontWeight: 700 }}>
-              احصل على عرض سعر خلال 24 ساعة
+              احصل علي عرض سعر خلال ساعات
             </h2>
             <p className="text-[#2F2F2F]">
               املأ النموذج وسيتواصل معك أحد مهندسينا لمناقشة مشروعك
@@ -83,6 +86,55 @@ export function LeadFormSection() {
                 )}
               </div>
 
+              {/* Company Name Field */}
+              <div className="text-right">
+                <label htmlFor="companyName" className="block mb-2 text-[#0B1C2D]">
+                  اسم المصنع <span className="text-[#2F2F2F]/60">(اختياري)</span>
+                </label>
+                <input
+                  id="companyName"
+                  type="text"
+                  {...register('companyName')}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF8C00] text-right"
+                  placeholder="أدخل اسم المصنع"
+                />
+              </div>
+
+              {/* Requirements Field */}
+              <div className="text-right">
+                <label htmlFor="requirements" className="block mb-2 text-[#0B1C2D]">
+                  اي الاحتياج المعدني الي محتاج تنفذه؟ <span className="text-[#FF8C00]">*</span>
+                </label>
+                <textarea
+                  id="requirements"
+                  {...register('requirements', { required: 'يرجى تحديد الاحتياج المعدني' })}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF8C00] text-right min-h-[100px]"
+                  placeholder="اكتب تفاصيل احتياجك المعدني"
+                />
+                {errors.requirements && (
+                  <p className="text-red-600 text-sm mt-1">{errors.requirements.message}</p>
+                )}
+              </div>
+
+              {/* Has Drawings Field */}
+              <div className="text-right">
+                <label htmlFor="hasDrawings" className="block mb-2 text-[#0B1C2D]">
+                  هل في رسومات معدنية ولا لا؟ <span className="text-[#FF8C00]">*</span>
+                </label>
+                <select
+                  id="hasDrawings"
+                  {...register('hasDrawings', { required: 'يرجى تحديد ما إذا كان لديك رسومات' })}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF8C00] text-right"
+                >
+                  <option value="">اختر خيارًا</option>
+                  <option value="نعم لدي رسومات معدنية">نعم لدي رسومات معدنية</option>
+                  <option value="لا ليس لدي رسومات معدنية">لا ليس لدي رسومات معدنية</option>
+                </select>
+                {errors.hasDrawings && (
+                  <p className="text-red-600 text-sm mt-1">{errors.hasDrawings.message}</p>
+                )}
+              </div>
+
               {/* Project Type Field */}
               <div className="text-right">
                 <label htmlFor="projectType" className="block mb-2 text-[#0B1C2D]">
@@ -98,6 +150,8 @@ export function LeadFormSection() {
                   <option value="أعمال لحام">أعمال لحام</option>
                   <option value="قص ليزر">قص ليزر وCNC</option>
                   <option value="هياكل معدنية">هياكل معدنية</option>
+                  <option value="رفايع واسطمبات">رفايع واسطمبات</option>
+                  <option value="جلفنة">جلفنة</option>
                   <option value="أخرى">أخرى</option>
                 </select>
               </div>
